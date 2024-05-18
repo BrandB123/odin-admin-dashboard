@@ -1,10 +1,43 @@
-
-
-body {
-    background-color: blue;
-    color: white;
+*{
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.page-container{
+    display: grid;
+    height: clamp(700px, 100vh, 900px);
+    width: clamp(1200px, 100vw, 1800px);
+    grid-template: clamp(100px, 125px, 150px) 4fr / 1fr 4fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main-container";
+}
+
+
+.sidebar{
+    display: grid;
+    grid-area: sidebar;
+}
+
+
+.header{
+    display: grid;
+    grid-area: header;
+}
+
+
+.main-container{
+    display: grid;
+    grid-area: main-container;
+}
 
 
 
