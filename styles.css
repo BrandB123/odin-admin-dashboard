@@ -58,7 +58,7 @@ body {
     grid-template: repeat(6, 50px) / 1fr;
     grid-area: page-tabs;
     align-items: center;
-    padding-left: 25px;
+    padding-left: 40px;
 }
 
 .page-tabs>div{
@@ -66,6 +66,7 @@ body {
     grid-template: 1fr / 1fr 4fr;
     align-items: center;
 }
+
 
 .page-tabs>div>svg{
     height: 25px;
@@ -78,7 +79,7 @@ body {
     grid-template: repeat(3, 50px) / 1fr;
     grid-area: settings-tabs;
     align-items: center;
-    padding-left: 25px;
+    padding-left: 40px;
     margin-top: 30px;
 }
 
@@ -98,8 +99,76 @@ body {
 .header{
     display: grid;
     grid-area: header;
-    background-color: #333;
+    background-color: #222;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: 
+        "search user"
+        "greeting button-row";
+    padding: 20px;
 }
+
+
+.search{
+    grid-area: search;
+}
+
+.search>svg{
+    height: 25px;
+    width: 25px;
+}
+
+.search>input{
+    width: 80%;
+    background-color: #ddd;
+    border-radius: 15px;
+    height: 25px;
+}
+
+
+.user{
+    grid-area: user;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.user>svg{
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.greeting{
+    grid-area: greeting;
+    display: flex;
+    gap: 15px;
+}
+
+.greeting>svg{
+    height: 40px;
+    width: 40px;
+}
+
+
+
+.button-row{
+    grid-area: button-row;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.button-row>button{
+    background-color: #094895;
+    color: white;
+    width: 30%;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+} 
+
 
 
 .main-container{
