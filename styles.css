@@ -1,13 +1,17 @@
 *{
-    border: 1px solid black;
     margin: 0;
     padding: 0;
+}
+
+svg{
+    fill: white;
 }
 
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: white;
 }
 
 
@@ -15,7 +19,8 @@ body {
     display: grid;
     height: clamp(700px, 100vh, 900px);
     width: clamp(1200px, 100vw, 1800px);
-    grid-template: clamp(100px, 125px, 150px) 4fr / 1fr 4fr;
+    grid-template-rows: clamp(100px, 125px, 150px) 4fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main-container";
@@ -25,18 +30,82 @@ body {
 .sidebar{
     display: grid;
     grid-area: sidebar;
+    grid-template: 1fr 3fr 4fr / 1fr;
+    grid-template-areas: 
+    "logo"
+    "page-tabs"
+    "settings-tabs";
+    background-color: #094895;
+    align-items: baseline;
+
 }
+
+
+.logo{
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    grid-area: logo;
+    align-items: center;
+    font-size: 30px;
+    gap: 15px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+
+.page-tabs{
+    display: grid;
+    grid-template: repeat(6, 50px) / 1fr;
+    grid-area: page-tabs;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.page-tabs>div{
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    align-items: center;
+}
+
+.page-tabs>div>svg{
+    height: 25px;
+    width: 25px;
+}
+
+
+.settings-tabs{
+    display: grid;
+    grid-template: repeat(3, 50px) / 1fr;
+    grid-area: settings-tabs;
+    align-items: center;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+
+.settings-tabs>div{
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    align-items: center;
+}
+
+.settings-tabs>div>svg{
+    height: 25px;
+    width: 25px;
+}
+
 
 
 .header{
     display: grid;
     grid-area: header;
+    background-color: #333;
 }
 
 
 .main-container{
     display: grid;
     grid-area: main-container;
+    background-color: #333;
 }
 
 
