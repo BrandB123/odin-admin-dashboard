@@ -17,8 +17,8 @@ body {
 
 .page-container{
     display: grid;
-    height: clamp(700px, 100vh, 900px);
-    width: clamp(1200px, 100vw, 1800px);
+    /*height: clamp(700px, 100vh, 900px);
+    width: clamp(1200px, 100vw, 1800px);*/
     grid-template-rows: clamp(100px, 125px, 150px) 4fr;
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 
@@ -110,6 +110,10 @@ body {
 
 .search{
     grid-area: search;
+    display: grid;
+    grid-template: 1fr / 1fr 18fr;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
 .search>svg{
@@ -122,6 +126,8 @@ body {
     background-color: #ddd;
     border-radius: 15px;
     height: 25px;
+    border: none;
+    padding-left: 10px;
 }
 
 
@@ -181,19 +187,52 @@ body {
 .project-container{
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-    grid-template-rows: 30px 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr 1fr;
     gap: 15px;
     margin: 30px;
-}
-
-.project-container>div{
-    background-color: gray;
-    border-radius: 10px;
 }
 
 .heading{
     grid-column-start: 1;
     grid-column-end: -1;
+}
+
+.card{
+    background-color: gray;
+    border-radius: 10px;
+    display: grid;
+    align-items: baseline;
+    grid-template: 3fr 1fr / 2% 98%;
+    grid-template-areas: 
+    "side-color card-text"
+    "side-color card-icons";
+}
+
+.side-color{
+    grid-area: side-color;
+    background-color: #094895;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.card-text{
+    grid-area: card-text;
+    margin: 10px;
+}
+
+.title{
+    margin-bottom: 10px;;
+}
+
+.card-icons{
+    grid-area: card-icons;
+    margin: 10px 0 10px 60%;
+}
+
+.card-icons>svg{
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
 }
 
 .auxillary-container{
