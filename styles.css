@@ -17,8 +17,6 @@ body {
 
 .page-container{
     display: grid;
-    /*height: clamp(700px, 100vh, 900px);
-    width: clamp(1200px, 100vw, 1800px);*/
     grid-template-rows: clamp(100px, 125px, 150px) 4fr;
     grid-template-columns: 1fr 4fr;
     grid-template-areas: 
@@ -237,8 +235,64 @@ body {
 
 .auxillary-container{
     display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    margin: 30px;
+    gap: 20px;
 }
 
+.auxillary-upper{
+    border-radius: 10px;  
+    padding: 10px;
+    display: grid;
+    grid-template: 10% repeat(3, 1fr), 1fr;    
+}
+
+.announcement-items{
+    background-color: gray;
+    border-radius: 10px;  
+    padding: 10px;
+}
+
+.announcement-item{
+    border-bottom: 2px solid #666;
+    padding: 10px;
+}
+
+.announcement-item:last-of-type{
+    border: none;
+}
+
+
+.auxillary-lower{
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template: 10% repeat(3, 1fr), 1fr;
+}
+
+.notification-items{
+    background-color: gray;
+    border-radius: 10px;  
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.notification-item{
+    border-bottom: 2px solid #666;
+    padding: 10px;
+}
+
+
+.notification-item:last-of-type{
+    border: none;
+}
+
+
+.title, .announcement-title, .notification-title{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 
